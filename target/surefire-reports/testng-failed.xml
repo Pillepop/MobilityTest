@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" verbose="0" name="Failed suite [Suite]" parallel="tests">
+  <test name="Test(failed)" parallel="tests" preserve-order="false">
+    <classes>
+      <class name="com.perfectomobile.StcTest">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="afterClass"/>
+          <include name="f"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
