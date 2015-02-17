@@ -80,6 +80,8 @@ public class StcTest {
 	  sleep(3000);
 	  visualDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	  visualDriver.findElement(By.linkText("Email Kamera"));
+	  
+	  device.close();
 	  System.out.println("finished");
 	  
 
