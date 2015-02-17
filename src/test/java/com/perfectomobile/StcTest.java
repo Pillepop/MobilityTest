@@ -67,6 +67,8 @@ public class StcTest {
 	  MobileDriver driver = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
 	 // IMobileDevice device = driver.getDevice("219595A5"); //S4
 	  IMobileDevice device = driver.getDevice("1E674EB8"); //S5
+	  MobileDeviceOpenOptions openOptions2 = new MobileDeviceOpenOptions();
+	  device.open(openOptions2);
 	  MobileDeviceHomeOptions homeOptions1 = new MobileDeviceHomeOptions();
 	  device.home(homeOptions1);
 
@@ -74,8 +76,7 @@ public class StcTest {
       IMobileWebDriver webDriver = 	device.getDOMDriver(MobileBrowserType.DEFAULT);
       IMobileWebDriver nativeDriver = device.getNativeDriver();
       	  
-	  MobileDeviceOpenOptions openOptions2 = new MobileDeviceOpenOptions();
-	  device.open(openOptions2);
+
 	  sleep(3000);
 	  visualDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	  visualDriver.findElement(By.linkText("Email Kamera"));
