@@ -63,7 +63,8 @@ public class StcTest {
   }
 
   public void testrun(){
-	  MobileDriver driver = new MobileDriver();
+	  //MobileDriver driver = new MobileDriver();
+	  MobileDriver driver = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
 	 // IMobileDevice device = driver.getDevice("219595A5"); //S4
 	  IMobileDevice device = driver.getDevice("1E674EB8"); //S5
 	  MobileDeviceHomeOptions homeOptions1 = new MobileDeviceHomeOptions();
