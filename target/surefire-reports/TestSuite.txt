@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 79.689 sec <<< FAILURE!
-f(com.perfectomobile.StcTest)  Time elapsed: 25.961 sec  <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 80.317 sec <<< FAILURE!
+f(com.perfectomobile.StcTest)  Time elapsed: 26.294 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: Element with text MySTC Account wasn't found.
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'

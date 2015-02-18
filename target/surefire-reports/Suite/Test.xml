@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="nb-philipps-7" name="com.perfectomobile.StcTest" tests="2" failures="1" timestamp="18 Feb 2015 02:04:51 GMT" time="79.182" errors="0">
-  <testcase name="f" time="25.929" classname="com.perfectomobile.StcTest">
+<testsuite hostname="nb-philipps-7" name="com.perfectomobile.StcTest" tests="2" failures="1" timestamp="18 Feb 2015 08:26:19 GMT" time="79.856" errors="0">
+  <testcase name="f" time="26.274" classname="com.perfectomobile.StcTest">
     <failure type="org.openqa.selenium.NoSuchElementException" message="Element with text MySTC Account wasn&amp;apos;t found.
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &amp;apos;2.44.0&amp;apos;, revision: &amp;apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&amp;apos;, time: &amp;apos;2014-10-23 13:11:40&amp;apos;
@@ -20,5 +20,5 @@ Driver info: driver.version: unknown
 ... Removed 17 stack frames]]>
     </failure>
   </testcase>
-  <testcase name="f" time="24.807" classname="com.perfectomobile.StcTest"/>
+  <testcase name="f" time="24.919" classname="com.perfectomobile.StcTest"/>
 </testsuite>
