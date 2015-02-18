@@ -40,8 +40,8 @@ public class StcTest {
 	@Test(dataProvider = "dp")
 	public void f(Integer n, String s) {
 	  System.out.println("test run "+s);
-	  //uploadLatestBuild();
-	  //install(s);
+	  uploadLatestBuild();
+	  install(s);
 	  testrun(s);
 	  }
 	
@@ -70,7 +70,7 @@ public class StcTest {
 
   @BeforeTest
   public void beforeTest() {
-	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
+	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "apass");
   }
 
   @AfterTest
