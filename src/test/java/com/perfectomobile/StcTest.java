@@ -45,9 +45,8 @@ public class StcTest {
 	  System.out.println("test run "+s);
 	  device = driver.getDevice(s);
 	  device.open();	  
-	 
-//	  uploadLatestBuild();
-//	  install(s);
+	 	  
+	  install(s);
 	  testrun(s);
 	  }
 	
@@ -58,8 +57,9 @@ public class StcTest {
       new Object[] { 2, "219595A5" },
     };
   }
-  /*@BeforeMethod
+ /* @BeforeMethod
   public void beforeMethod() {
+
   }
 
   @AfterMethod
@@ -77,6 +77,7 @@ public class StcTest {
   @BeforeTest
   public void beforeTest() {
 	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
+	  uploadLatestBuild();
   }
 
   @AfterTest
@@ -84,7 +85,6 @@ public class StcTest {
 	  
 	  System.out.println("finished");
 	  downloadReport(driver, "results.html");
-	  device.close();
 	  driver.quit();
 	  
   }
@@ -141,6 +141,7 @@ public void install(String deviceID){
 			System.out.println(e.getMessage());
 			// TODO: handle exception
 		}		
+		device.close();
   }
 	private static void sleep(long millis) {
 		try {
