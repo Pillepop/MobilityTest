@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="26.463" errors="0" skipped="0" tests="1" name="TestSuite">
+<testsuite failures="1" time="50.248" errors="0" skipped="0" tests="2" name="TestSuite">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_51\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\philipps\workspace_luna\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1164109176821760289.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\philipps\workspace_luna\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1973818469733675884.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_51\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/bin/server;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/bin;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/lib/amd64;C:/Program Files/Java/jre7/bin/server;C:/Program Files/Java/jre7/bin;C:/Program Files/Java/jre7/lib/amd64;C:\Program Files (x86)\Google\Chrome\Application;c:\windows\system32;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\HP\Unified Functional Testing\bin;C:\Program Files (x86)\Calibre2\;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Users\philipps\Downloads;;C:\Users\philipps\Downloads;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -63,5 +63,59 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="26.463" classname="com.perfectomobile.StcTest" name="f"/>
+  <testcase time="25.791" classname="com.perfectomobile.StcTest" name="f">
+    <failure message="Element with text MySTC Account wasn&apos;t found.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
+System info: host: &apos;nb-philipps-7&apos;, ip: &apos;192.168.178.20&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Element with text MySTC Account wasn&apos;t found.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
+System info: host: &apos;nb-philipps-7&apos;, ip: &apos;192.168.178.20&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Driver info: driver.version: unknown
+	at com.perfectomobile.selenium.MobileVisualApplication.findElementByLinkText(MobileVisualApplication.java:192)
+	at com.perfectomobile.StcTest.testrun(StcTest.java:132)
+	at com.perfectomobile.StcTest.f(StcTest.java:44)
+</failure>
+    <system-out>02:53:12.851 [TestNG] INFO  c.p.selenium.MobileDriver - Creating mobile driver
+02:53:12.867 [TestNG] INFO  c.p.selenium.MobileDriver - Starting execution
+02:53:12.898 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=START_EXECUTION,_itemId=&lt;null&gt;,_parameters=[ParameterValue[_name=responseFormat,_value=xml]],_stringParameters=&lt;null&gt;,_encoding=&lt;null&gt;]
+02:53:12.898 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions?operation=start&amp;responseFormat=xml&amp;user=philipps%40perfectomobile.com
+02:53:14.271 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;executionId&gt;philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925&lt;/executionId&gt;&lt;reportKey&gt;PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml&lt;/reportKey&gt;&lt;/response&gt;
+02:53:14.303 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {executionId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925, reportKey=PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml}
+02:53:14.303 [TestNG] INFO  c.p.selenium.MobileDriver - Started execution: philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925
+02:53:14.303 [TestNG] INFO  c.p.selenium.MobileDriver - Created mobile driver
+test run 1E674EB8
+02:53:14.319 [TestNG] INFO  c.p.selenium.MobileEntity - Execution command handset open with parameters {allocation=nowait, handsetId=1E674EB8}
+02:53:14.319 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=EXECUTE_COMMAND,_itemId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925,_parameters=[ParameterValue[_name=responseFormat,_value=xml], ParameterValue[_name=command,_value=handset], ParameterValue[_name=subcommand,_value=open], ParameterValue[_name=param.allocation,_value=nowait], ParameterValue[_name=param.handsetId,_value=1E674EB8]],_stringParameters=&lt;null&gt;,_encoding=UTF-8]
+02:53:14.319 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925?operation=command&amp;responseFormat=xml&amp;command=handset&amp;subcommand=open&amp;param.allocation=nowait&amp;param.handsetId=1E674EB8&amp;user=philipps%40perfectomobile.com
+02:53:23.033 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;timer.ux&gt;0&lt;/timer.ux&gt;&lt;timer.device&gt;0&lt;/timer.device&gt;&lt;timer.system&gt;8375&lt;/timer.system&gt;&lt;flowEndCode&gt;SUCCEEDED&lt;/flowEndCode&gt;&lt;reason&gt;Success&lt;/reason&gt;&lt;description&gt;Success&lt;/description&gt;&lt;executionId&gt;philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925&lt;/executionId&gt;&lt;reportKey&gt;PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml&lt;/reportKey&gt;&lt;timer.elapsed&gt;8375&lt;/timer.elapsed&gt;&lt;completed&gt;true&lt;/completed&gt;&lt;/response&gt;
+02:53:23.049 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {timer.ux=0, timer.device=0, timer.system=8375, flowEndCode=SUCCEEDED, reason=Success, description=Success, executionId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925, reportKey=PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml, timer.elapsed=8375, completed=true}
+02:53:23.049 [TestNG] INFO  c.p.selenium.MobileEntity - Got return value: null
+02:53:23.049 [TestNG] INFO  c.p.selenium.MobileEntity - Execution command handset ready with parameters {handsetId=1E674EB8}
+02:53:23.049 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=EXECUTE_COMMAND,_itemId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925,_parameters=[ParameterValue[_name=responseFormat,_value=xml], ParameterValue[_name=command,_value=handset], ParameterValue[_name=subcommand,_value=ready], ParameterValue[_name=param.handsetId,_value=1E674EB8]],_stringParameters=&lt;null&gt;,_encoding=UTF-8]
+02:53:23.049 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925?operation=command&amp;responseFormat=xml&amp;command=handset&amp;subcommand=ready&amp;param.handsetId=1E674EB8&amp;user=philipps%40perfectomobile.com
+02:53:28.760 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;timer.ux&gt;5469&lt;/timer.ux&gt;&lt;timer.device&gt;5469&lt;/timer.device&gt;&lt;timer.system&gt;0&lt;/timer.system&gt;&lt;flowEndCode&gt;SUCCEEDED&lt;/flowEndCode&gt;&lt;reason&gt;Success&lt;/reason&gt;&lt;description&gt;Success&lt;/description&gt;&lt;executionId&gt;philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925&lt;/executionId&gt;&lt;reportKey&gt;PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml&lt;/reportKey&gt;&lt;timer.elapsed&gt;5469&lt;/timer.elapsed&gt;&lt;completed&gt;true&lt;/completed&gt;&lt;/response&gt;
+02:53:28.760 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {timer.ux=5469, timer.device=5469, timer.system=0, flowEndCode=SUCCEEDED, reason=Success, description=Success, executionId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925, reportKey=PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml, timer.elapsed=5469, completed=true}
+02:53:28.760 [TestNG] INFO  c.p.selenium.MobileEntity - Got return value: null
+02:53:28.808 [TestNG] INFO  c.p.selenium.MobileEntity - Execution command application open with parameters {name=MySTC, handsetId=1E674EB8}
+02:53:28.808 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=EXECUTE_COMMAND,_itemId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925,_parameters=[ParameterValue[_name=responseFormat,_value=xml], ParameterValue[_name=command,_value=application], ParameterValue[_name=subcommand,_value=open], ParameterValue[_name=param.name,_value=MySTC], ParameterValue[_name=param.handsetId,_value=1E674EB8]],_stringParameters=&lt;null&gt;,_encoding=UTF-8]
+02:53:28.808 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925?operation=command&amp;responseFormat=xml&amp;command=application&amp;subcommand=open&amp;param.name=MySTC&amp;param.handsetId=1E674EB8&amp;user=philipps%40perfectomobile.com
+02:53:30.586 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;timer.ux&gt;1547&lt;/timer.ux&gt;&lt;timer.device&gt;1547&lt;/timer.device&gt;&lt;timer.system&gt;0&lt;/timer.system&gt;&lt;flowEndCode&gt;SUCCEEDED&lt;/flowEndCode&gt;&lt;reason&gt;Success&lt;/reason&gt;&lt;description&gt;Success&lt;/description&gt;&lt;returnValue&gt;OK&lt;/returnValue&gt;&lt;executionId&gt;philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925&lt;/executionId&gt;&lt;reportKey&gt;PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml&lt;/reportKey&gt;&lt;timer.elapsed&gt;1547&lt;/timer.elapsed&gt;&lt;completed&gt;true&lt;/completed&gt;&lt;/response&gt;
+02:53:30.586 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {timer.ux=1547, timer.device=1547, timer.system=0, flowEndCode=SUCCEEDED, reason=Success, description=Success, returnValue=OK, executionId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925, reportKey=PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml, timer.elapsed=1547, completed=true}
+02:53:30.586 [TestNG] INFO  c.p.selenium.MobileEntity - Got return value: OK
+02:53:30.586 [TestNG] INFO  c.p.selenium.MobileEntity - Execution command text find with parameters {content=MySTC Account, handsetId=1E674EB8}
+02:53:30.586 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=EXECUTE_COMMAND,_itemId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925,_parameters=[ParameterValue[_name=responseFormat,_value=xml], ParameterValue[_name=command,_value=text], ParameterValue[_name=subcommand,_value=find], ParameterValue[_name=param.content,_value=MySTC Account], ParameterValue[_name=param.handsetId,_value=1E674EB8]],_stringParameters=&lt;null&gt;,_encoding=UTF-8]
+02:53:30.586 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925?operation=command&amp;responseFormat=xml&amp;command=text&amp;subcommand=find&amp;param.content=MySTC+Account&amp;param.handsetId=1E674EB8&amp;user=philipps%40perfectomobile.com
+02:53:40.047 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;timer.device&gt;0&lt;/timer.device&gt;&lt;timer.system&gt;9235&lt;/timer.system&gt;&lt;screenAnalysis.analyzedRegion.width&gt;1080&lt;/screenAnalysis.analyzedRegion.width&gt;&lt;reason&gt;ValidationFailure&lt;/reason&gt;&lt;executionId&gt;philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925&lt;/executionId&gt;&lt;screenAnalysis.analyzedRegion.left&gt;0&lt;/screenAnalysis.analyzedRegion.left&gt;&lt;screenAnalysis.grade&gt;25&lt;/screenAnalysis.grade&gt;&lt;screenAnalysis.analyzedRegion.top&gt;0&lt;/screenAnalysis.analyzedRegion.top&gt;&lt;timer.ux&gt;0&lt;/timer.ux&gt;&lt;flowEndCode&gt;FAILED&lt;/flowEndCode&gt;&lt;description&gt;Needle not found for expected value: &quot;MYSTC ACCOUNT&quot;&lt;/description&gt;&lt;reportKey&gt;PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml&lt;/reportKey&gt;&lt;screenAnalysis.analyzedRegion.height&gt;1920&lt;/screenAnalysis.analyzedRegion.height&gt;&lt;timer.elapsed&gt;9235&lt;/timer.elapsed&gt;&lt;completed&gt;true&lt;/completed&gt;&lt;/response&gt;
+02:53:40.063 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {timer.ux=0, timer.device=0, timer.system=9235, flowEndCode=FAILED, screenAnalysis.analyzedRegion.width=1080, reason=ValidationFailure, description=Needle not found for expected value: &quot;MYSTC ACCOUNT&quot;, executionId=philipps@perfectomobile.com_controller_15-02-18_01_53_25_2925, reportKey=PRIVATE:controller/controller_15-02-18_01_53_25_2925.xml, screenAnalysis.grade=25, screenAnalysis.analyzedRegion.left=0, screenAnalysis.analyzedRegion.top=0, screenAnalysis.analyzedRegion.height=1920, timer.elapsed=9235, completed=true}
+02:53:40.063 [TestNG] INFO  c.p.selenium.MobileEntity - Got return value: false
+</system-out>
+  </testcase>
+  <testcase time="24.457" classname="com.perfectomobile.StcTest" name="f"/>
 </testsuite>

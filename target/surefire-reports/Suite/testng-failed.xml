@@ -7,7 +7,7 @@
         <methods>
           <include name="afterSuite"/>
           <include name="afterClass"/>
-          <include name="f"/>
+          <include name="f" invocation-numbers="0"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
           <include name="afterTest"/>
