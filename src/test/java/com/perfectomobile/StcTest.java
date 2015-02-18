@@ -53,7 +53,7 @@ public class StcTest {
 	  device = driver.getDevice(s);
 	  device.open();	  
 	 	  
-//	  install(s);
+	  install(s);
 	  testCar2Go(s);
 	  }
 
