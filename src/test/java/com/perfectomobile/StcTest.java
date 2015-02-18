@@ -77,8 +77,9 @@ public class StcTest {
   public void afterTest() {
 	  device.close();
 	  System.out.println("finished");
-	  driver.quit();
 	  downloadReport(driver, "results.html");
+	  driver.quit();
+	  
   }
 
   @BeforeSuite

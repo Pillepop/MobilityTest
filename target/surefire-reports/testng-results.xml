@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="81833" started-at="2015-02-18T02:53:12Z" finished-at="2015-02-18T02:54:34Z">
+  <suite name="Suite" duration-ms="79182" started-at="2015-02-18T03:03:31Z" finished-at="2015-02-18T03:04:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="81833" started-at="2015-02-18T02:53:12Z" finished-at="2015-02-18T02:54:34Z">
+    <test name="Test" duration-ms="79182" started-at="2015-02-18T03:03:31Z" finished-at="2015-02-18T03:04:51Z">
       <class name="com.perfectomobile.StcTest">
-        <test-method status="PASS" signature="beforeSuite()" name="beforeSuite" is-config="true" duration-ms="16" started-at="2015-02-18T02:53:12Z" finished-at="2015-02-18T02:53:12Z">
+        <test-method status="PASS" signature="beforeSuite()" name="beforeSuite" is-config="true" duration-ms="15" started-at="2015-02-18T03:03:31Z" finished-at="2015-02-18T03:03:31Z">
         </test-method>
-        <test-method status="PASS" signature="beforeTest()" name="beforeTest" is-config="true" duration-ms="1576" started-at="2015-02-18T02:53:12Z" finished-at="2015-02-18T02:53:14Z">
+        <test-method status="PASS" signature="beforeTest()" name="beforeTest" is-config="true" duration-ms="1515" started-at="2015-02-18T03:03:31Z" finished-at="2015-02-18T03:03:33Z">
         </test-method>
-        <test-method status="FAIL" signature="f(java.lang.Integer, java.lang.String)" name="f" duration-ms="25760" started-at="2015-02-18T02:53:14Z" finished-at="2015-02-18T02:53:40Z">
+        <test-method status="PASS" signature="beforeClass()" name="beforeClass" is-config="true" duration-ms="0" started-at="2015-02-18T03:03:33Z" finished-at="2015-02-18T03:03:33Z">
+        </test-method>
+        <test-method status="PASS" signature="beforeMethod()" name="beforeMethod" is-config="true" duration-ms="0" started-at="2015-02-18T03:03:33Z" finished-at="2015-02-18T03:03:33Z">
+        </test-method>
+        <test-method status="FAIL" signature="f(java.lang.Integer, java.lang.String)" name="f" duration-ms="25929" started-at="2015-02-18T03:03:33Z" finished-at="2015-02-18T03:03:59Z">
           <params>
             <param index="0">
               <value>
@@ -39,8 +43,8 @@ Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43a
 System info: host: 'nb-philipps-7', ip: '192.168.178.20', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
 Driver info: driver.version: unknown
 	at com.perfectomobile.selenium.MobileVisualApplication.findElementByLinkText(MobileVisualApplication.java:192)
-	at com.perfectomobile.StcTest.testrun(StcTest.java:132)
-	at com.perfectomobile.StcTest.f(StcTest.java:44)
+	at com.perfectomobile.StcTest.testrun(StcTest.java:134)
+	at com.perfectomobile.StcTest.f(StcTest.java:45)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,13 +69,11 @@ Driver info: driver.version: unknown
             </full-stacktrace>
           </exception>
         </test-method>
-        <test-method status="PASS" signature="beforeMethod()" name="beforeMethod" is-config="true" duration-ms="0" started-at="2015-02-18T02:53:14Z" finished-at="2015-02-18T02:53:14Z">
+        <test-method status="PASS" signature="beforeMethod()" name="beforeMethod" is-config="true" duration-ms="0" started-at="2015-02-18T03:03:59Z" finished-at="2015-02-18T03:03:59Z">
         </test-method>
-        <test-method status="PASS" signature="beforeClass()" name="beforeClass" is-config="true" duration-ms="0" started-at="2015-02-18T02:53:14Z" finished-at="2015-02-18T02:53:14Z">
+        <test-method status="PASS" signature="afterMethod()" name="afterMethod" is-config="true" duration-ms="0" started-at="2015-02-18T03:03:59Z" finished-at="2015-02-18T03:03:59Z">
         </test-method>
-        <test-method status="PASS" signature="afterMethod()" name="afterMethod" is-config="true" duration-ms="0" started-at="2015-02-18T02:53:40Z" finished-at="2015-02-18T02:53:40Z">
-        </test-method>
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)" name="f" duration-ms="24461" started-at="2015-02-18T02:53:40Z" finished-at="2015-02-18T02:54:04Z">
+        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)" name="f" duration-ms="24807" started-at="2015-02-18T03:03:59Z" finished-at="2015-02-18T03:04:24Z">
           <params>
             <param index="0">
               <value>
@@ -85,15 +87,13 @@ Driver info: driver.version: unknown
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="beforeMethod()" name="beforeMethod" is-config="true" duration-ms="0" started-at="2015-02-18T02:53:40Z" finished-at="2015-02-18T02:53:40Z">
+        <test-method status="PASS" signature="afterMethod()" name="afterMethod" is-config="true" duration-ms="0" started-at="2015-02-18T03:04:24Z" finished-at="2015-02-18T03:04:24Z">
         </test-method>
-        <test-method status="PASS" signature="afterClass()" name="afterClass" is-config="true" duration-ms="0" started-at="2015-02-18T02:54:04Z" finished-at="2015-02-18T02:54:04Z">
+        <test-method status="PASS" signature="afterTest()" name="afterTest" is-config="true" duration-ms="26898" started-at="2015-02-18T03:04:24Z" finished-at="2015-02-18T03:04:51Z">
         </test-method>
-        <test-method status="PASS" signature="afterTest()" name="afterTest" is-config="true" duration-ms="30009" started-at="2015-02-18T02:54:04Z" finished-at="2015-02-18T02:54:34Z">
+        <test-method status="PASS" signature="afterClass()" name="afterClass" is-config="true" duration-ms="0" started-at="2015-02-18T03:04:24Z" finished-at="2015-02-18T03:04:24Z">
         </test-method>
-        <test-method status="PASS" signature="afterMethod()" name="afterMethod" is-config="true" duration-ms="0" started-at="2015-02-18T02:54:04Z" finished-at="2015-02-18T02:54:04Z">
-        </test-method>
-        <test-method status="PASS" signature="afterSuite()" name="afterSuite" is-config="true" duration-ms="0" started-at="2015-02-18T02:54:34Z" finished-at="2015-02-18T02:54:34Z">
+        <test-method status="PASS" signature="afterSuite()" name="afterSuite" is-config="true" duration-ms="0" started-at="2015-02-18T03:04:51Z" finished-at="2015-02-18T03:04:51Z">
         </test-method>
       </class>
     </test>

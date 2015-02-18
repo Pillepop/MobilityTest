@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="nb-philipps-7" name="com.perfectomobile.StcTest" tests="2" failures="1" timestamp="18 Feb 2015 01:54:34 GMT" time="81.833" errors="0">
-  <testcase name="f" time="25.76" classname="com.perfectomobile.StcTest">
+<testsuite hostname="nb-philipps-7" name="com.perfectomobile.StcTest" tests="2" failures="1" timestamp="18 Feb 2015 02:04:51 GMT" time="79.182" errors="0">
+  <testcase name="f" time="25.929" classname="com.perfectomobile.StcTest">
     <failure type="org.openqa.selenium.NoSuchElementException" message="Element with text MySTC Account wasn&amp;apos;t found.
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &amp;apos;2.44.0&amp;apos;, revision: &amp;apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&amp;apos;, time: &amp;apos;2014-10-23 13:11:40&amp;apos;
@@ -12,13 +12,13 @@ Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43a
 System info: host: 'nb-philipps-7', ip: '192.168.178.20', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
 Driver info: driver.version: unknown
 	at com.perfectomobile.selenium.MobileVisualApplication.findElementByLinkText(MobileVisualApplication.java:192)
-	at com.perfectomobile.StcTest.testrun(StcTest.java:132)
-	at com.perfectomobile.StcTest.f(StcTest.java:44)
+	at com.perfectomobile.StcTest.testrun(StcTest.java:134)
+	at com.perfectomobile.StcTest.f(StcTest.java:45)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)
 ... Removed 17 stack frames]]>
     </failure>
   </testcase>
-  <testcase name="f" time="24.461" classname="com.perfectomobile.StcTest"/>
+  <testcase name="f" time="24.807" classname="com.perfectomobile.StcTest"/>
 </testsuite>
