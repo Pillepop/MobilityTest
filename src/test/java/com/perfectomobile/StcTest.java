@@ -36,12 +36,18 @@ import com.perfectomobile.selenium.by.*;
 public class StcTest {
 	private  MobileDriver driver;
 	private IMobileDevice device;
+	private String repositoryPath = "PUBLIC:Philipp\\builds\\STC.apk";
+	private String localPath = "C:\\mybuild\\MySTC_com.stc_2.4.0_46.apk";
+	private String appIdentifier = "MySTC";
   
 	@Test(dataProvider = "dp")
 	public void f(Integer n, String s) {
 	  System.out.println("test run "+s);
-	  uploadLatestBuild();
-	  install(s);
+	  device = driver.getDevice(s);
+	  device.open();	  
+	 
+//	  uploadLatestBuild();
+//	  install(s);
 	  testrun(s);
 	  }
 	
@@ -52,7 +58,7 @@ public class StcTest {
       new Object[] { 2, "219595A5" },
     };
   }
-  @BeforeMethod
+  /*@BeforeMethod
   public void beforeMethod() {
   }
 
@@ -66,18 +72,19 @@ public class StcTest {
 
   @AfterClass
   public void afterClass() {
-  }
+  }*/
 
   @BeforeTest
   public void beforeTest() {
-	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "apass");
+	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
   }
 
   @AfterTest
   public void afterTest() {
-	  device.close();
+	  
 	  System.out.println("finished");
 	  downloadReport(driver, "results.html");
+	  device.close();
 	  driver.quit();
 	  
   }
@@ -92,37 +99,31 @@ public class StcTest {
 
   public void uploadLatestBuild(){
 	  try {
-		 driver.uploadMedia("PUBLIC:Philipp\\builds\\STC.apk","C:\\mybuild\\MySTC_com.stc_2.4.0_46.apk");
+		 driver.uploadMedia(repositoryPath,localPath);
+		 System.out.println("Upload of "+appIdentifier+ " succeeded");
 	} catch (Exception e) {
 		// TODO: handle exception
-		System.out.println(e.getMessage());
+		System.out.println("Upload of "+appIdentifier + " failed: " +e.getMessage());
 	}
   }
 
 public void install(String deviceID){
-	  device = driver.getDevice(deviceID);
-	  
+ 
 	  try {
-		  device.installApplication("PUBLIC:Philipp\\builds\\STC.apk");
-		  MobileApplicationInstallOptions installOptions9 = new MobileApplicationInstallOptions();
-		  installOptions9.setInstrument(false);
-		  device.installApplication("PUBLIC:Philipp\\builds\\STC.apk", installOptions9);
-
-
-		
+		  device.installApplication(repositoryPath);
+//		  MobileApplicationInstallOptions installOptions9 = new MobileApplicationInstallOptions();
+//		  installOptions9.setInstrument(false);
+//		  device.installApplication("PUBLIC:Philipp\\builds\\STC.apk", installOptions9);
+		  System.out.println("Installation of "+repositoryPath + " succeeded");
 	} catch (Exception e) {
-		System.out.println(e.getMessage());
+		System.out.println("Installation of "+repositoryPath + " failed: " +e.getMessage());
 		// TODO: handle exception
 	}
 }
   
   public void testrun(String deviceID){
 	  //MobileDriver driver = new MobileDriver();
-	 
-	 // IMobileDevice device = driver.getDevice("219595A5"); //S4
-	  device = driver.getDevice(deviceID); //S5
-	  MobileDeviceOpenOptions openOptions2 = new MobileDeviceOpenOptions();
-	  device.open(openOptions2);
+	  	 
 	  MobileDeviceHomeOptions homeOptions1 = new MobileDeviceHomeOptions();
 	  device.home(homeOptions1);
 
@@ -130,12 +131,11 @@ public void install(String deviceID){
       IMobileWebDriver webDriver = 	device.getDOMDriver(MobileBrowserType.DEFAULT);
       IMobileWebDriver nativeDriver = device.getNativeDriver();
       	  
-      device.getNativeDriver("MySTC").open();
-      visualDriver.findElementByLinkText("MySTC Account");
-		visualDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(90);
+      device.getNativeDriver("MySTC").open();		
 		
 		try{
+		visualDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(90);	
 		visualDriver.findElement(By.linkText("MyStc account"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
