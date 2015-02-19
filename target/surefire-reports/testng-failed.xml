@@ -6,7 +6,7 @@
       <class name="com.perfectomobile.StcTest">
         <methods>
           <include name="afterSuite"/>
-          <include name="f" invocation-numbers="0 1"/>
+          <include name="f" invocation-numbers="0"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
           <include name="beforeSuite"/>

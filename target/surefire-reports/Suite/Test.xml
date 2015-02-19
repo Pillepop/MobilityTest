@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="nb-philipps-7" name="com.perfectomobile.StcTest" tests="2" failures="0" timestamp="18 Feb 2015 22:45:10 GMT" time="204.249" errors="0">
-  <testcase name="f" time="109.644" classname="com.perfectomobile.StcTest"/>
-  <testcase name="f" time="70.476" classname="com.perfectomobile.StcTest"/>
+<testsuite hostname="nb-philipps-7" name="com.perfectomobile.StcTest" tests="2" failures="0" timestamp="19 Feb 2015 00:21:50 GMT" time="187.108" errors="0">
+  <testcase name="f" time="95.289" classname="com.perfectomobile.StcTest"/>
+  <testcase name="f" time="89.259" classname="com.perfectomobile.StcTest"/>
 </testsuite>

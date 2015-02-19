@@ -21,6 +21,7 @@ import org.testng.annotations.AfterSuite;
 import com.perfectomobile.httpclient.MediaType;
 import com.perfectomobile.httpclient.utils.FileUtils;
 import com.perfectomobile.selenium.MobileAddressLocation;
+import com.perfectomobile.selenium.MobileCoordinatesLocation;
 import com.perfectomobile.selenium.MobileDriver;
 import com.perfectomobile.selenium.MobileDevice;
 import com.perfectomobile.selenium.MobileDriver;
@@ -32,6 +33,9 @@ import com.perfectomobile.selenium.options.MobileApplicationInstallOptions;
 import com.perfectomobile.selenium.options.MobileBrowserType;
 import com.perfectomobile.selenium.options.MobileDeviceHomeOptions;
 import com.perfectomobile.selenium.options.MobileDeviceOpenOptions;
+import com.perfectomobile.selenium.options.visual.MobileSourceOptions;
+import com.perfectomobile.selenium.options.visual.image.MobileImageMatchMode;
+import com.perfectomobile.selenium.options.visual.text.MobileTextAnalysisMode;
 import com.perfectomobile.selenium.by.*;
 
 
@@ -56,7 +60,6 @@ public class StcTest {
 	  install(s);
 	  testCar2Go(s);
 	  }
-
 	
 	  @DataProvider
 	  public Object[][] dp() {
@@ -65,22 +68,6 @@ public class StcTest {
 	      new Object[] { 2, "219595A5" },
 	    };
 	  }
- /* @BeforeMethod
-  public void beforeMethod() {
-
-  }
-
-  @AfterMethod
-  public void afterMethod() {
-  }
-
-  @BeforeClass
-  public void beforeClass() {
-  }
-
-  @AfterClass
-  public void afterClass() {
-  }*/
 
   @BeforeTest
   public void beforeTest() {
@@ -125,9 +112,6 @@ public void install(String deviceID){
 			}
 		  
 		  device.installApplication(repositoryPath);
-//		  MobileApplicationInstallOptions installOptions9 = new MobileApplicationInstallOptions();
-//		  installOptions9.setInstrument(false);
-//		  device.installApplication("PUBLIC:Philipp\\builds\\STC.apk", installOptions9);
 		  System.out.println("Installation of "+repositoryPath + " succeeded");
 	} catch (Exception e) {
 		System.out.println("Installation of "+repositoryPath + " failed: " +e.getMessage());
@@ -144,7 +128,7 @@ public void install(String deviceID){
 	  IMobileWebDriver visualDriver = device.getVisualDriver();
       IMobileWebDriver webDriver = 	device.getDOMDriver(MobileBrowserType.DEFAULT);
       IMobileWebDriver nativeDriver = device.getNativeDriver();
-      	  
+	  
       device.getNativeDriver(appIdentifier).open();		
 		
 		try{
@@ -162,36 +146,39 @@ public void install(String deviceID){
 	  	 
 	  MobileDeviceHomeOptions homeOptions1 = new MobileDeviceHomeOptions();
 	  device.home(homeOptions1);
+	  device.resetLocation();
+
 
 	  IMobileWebDriver visualDriver = device.getVisualDriver();
       IMobileWebDriver webDriver = 	device.getDOMDriver(MobileBrowserType.DEFAULT);
       IMobileWebDriver nativeDriver = device.getNativeDriver();
       	  
       device.getNativeDriver(appIdentifier).open();		
-		
+	  sleep(2000);	
 		try{
 			visualDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(95);
-			visualDriver.findElement(By.linkText("Google-Kartendaten 2015 Google, GeoBasis-DE/BKG"));
+			visualDriver.findElement(By.linkText("2015 Google"));
 
-/*			MobileLocation location1 = new MobileAddressLocation("Münchner Freiheit, München");
-			device.setLocation(location1);
-
-			webDriver.findElement(By.xpath("//*[@contentDesc=\"Position bestimmen\"]")).click();
-			sleep(3000);*/
 			MobileLocation location2 = new MobileAddressLocation("Wilhelm-Runge-Straße 11, Ulm");
-			driver.getDevice("1E674EB8").setLocation(location2);
+			MobileLocation location3 = new MobileCoordinatesLocation("48.42143,9.94168");
 
-			webDriver.findElement(By.xpath("//*[@contentDesc=\"Position bestimmen\"]")).click();
+			device.setLocation(location3);sleep(2000);
+			System.out.println("location set, centering");			
+			webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			visualDriver.manageMobile().visualOptions().imageMatchOptions().setMatchMode(MobileImageMatchMode.BOUNDED_SIZE);
+			visualDriver.findElement(ByMobile.image("PUBLIC:Philipp\\button_location.png")).click();
 			
-			visualDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(80);
-			visualDriver.findElement(By.linkText("Car2Go"));
-
+			visualDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(75);
+			visualDriver.findElement(By.linkText("CarEGo"));
+			System.out.println("found");
+			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			// TODO: handle exception
-		}		
+		}	
+		device.getNativeDriver(appIdentifier).close();	
 		device.close();
   }
 	private static void sleep(long millis) {

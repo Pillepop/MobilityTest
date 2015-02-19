@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,26 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.perfectomobile.StcTest" hash-for-method="f(2, 219595A5)">f(2, 219595A5)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.perfectomobile.StcTest" hash-for-method="f(1, 1E674EB8)">f(1, 1E674EB8)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.perfectomobile.StcTest" hash-for-method="f(2, 219595A5)">f(2, 219595A5)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -121,64 +121,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.perfectomobile.StcTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="f(2, 219595A5)">
-                  </a> <!-- f(2, 219595A5) -->
-                  <span class="method-name">f</span>
-                  <span class="parameters">(2, 219595A5)</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Failed to open device 219595A5
-	at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:101)
-	at com.perfectomobile.StcTest.testrun(StcTest.java:115)
-	at com.perfectomobile.StcTest.f(StcTest.java:38)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:744)
-Caused by: com.perfectomobile.httpclient.HttpClientException: Failed to execute command handset open : Cannot open device 219595A5 for user philipps@perfectomobile.com, device is in use.
-	at com.perfectomobile.selenium.MobileEntity.processCommonResponse(MobileEntity.java:94)
-	at com.perfectomobile.selenium.MobileDevice.processResponse(MobileDevice.java:504)
-	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:58)
-	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:50)
-	at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:99)
-	... 22 more
-... Removed 16 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="f(1, 1E674EB8)">
                   </a> <!-- f(1, 1E674EB8) -->
                   <span class="method-name">f</span>
                   <span class="parameters">(1, 1E674EB8)</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Failed to open device 1E674EB8
-	at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:101)
-	at com.perfectomobile.StcTest.testrun(StcTest.java:115)
-	at com.perfectomobile.StcTest.f(StcTest.java:38)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:744)
-Caused by: com.perfectomobile.httpclient.HttpClientException: Failed to execute command handset open : Cannot open device 1E674EB8 for user philipps@perfectomobile.com, device is in use.
-	at com.perfectomobile.selenium.MobileEntity.processCommonResponse(MobileEntity.java:94)
-	at com.perfectomobile.selenium.MobileDevice.processResponse(MobileDevice.java:504)
-	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:58)
-	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:50)
-	at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:99)
-	... 22 more
-... Removed 16 stack frames
-</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(2, 219595A5)">
+                  </a> <!-- f(2, 219595A5) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(2, 219595A5)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -235,16 +201,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'f')
 data.setCell(0, 2, 'com.perfectomobile.StcTest')
-data.setCell(0, 3, 29402);
+data.setCell(0, 3, 86840);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'f')
 data.setCell(1, 2, 'com.perfectomobile.StcTest')
-data.setCell(1, 3, 28579);
+data.setCell(1, 3, 85968);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 57 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -277,51 +243,23 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">19 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">1825 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">1832 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">f(1, 1E674EB8)</span>
-                <span class="method-start">1833 ms</span>
+                <span class="method-start">1510 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">31243 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">31243 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">f(2, 219595A5)</span>
-                <span class="method-start">31244 ms</span>
+                <span class="method-start">87478 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">59824 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">59824 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">59825 ms</span>
+                <span class="method-start">174334 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">60110 ms</span>
+                <span class="method-start">175286 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
