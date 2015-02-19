@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="307.96" errors="0" skipped="0" tests="2" name="TestSuite">
+<testsuite failures="1" time="122.731" errors="0" skipped="0" tests="2" name="TestSuite">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_51\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\philipps\workspace_luna\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4953732488921404295.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\philipps\workspace_luna\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7629624925358773653.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_51\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/bin/server;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/bin;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/lib/amd64;c:\windows\system32;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\HP\Unified Functional Testing\bin;C:\Program Files (x86)\Calibre2\;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\Git\cmd;C:\Users\philipps\java\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -63,6 +63,35 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="154.633" classname="com.perfectomobile.StcTest" name="f"/>
-  <testcase time="153.327" classname="com.perfectomobile.StcTest" name="f"/>
+  <testcase time="0.405" classname="com.perfectomobile.StcTest" name="f">
+    <failure message="Failed to open device 1E674EB8" type="java.lang.RuntimeException">java.lang.RuntimeException: Failed to open device 1E674EB8
+	at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:101)
+	at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:91)
+	at com.perfectomobile.StcTest.f(StcTest.java:64)
+Caused by: com.perfectomobile.httpclient.HttpClientException: Failed to execute command handset open : Cannot open device 1E674EB8 for user philipps@perfectomobile.com, device is in use.
+	at com.perfectomobile.selenium.MobileEntity.processCommonResponse(MobileEntity.java:94)
+	at com.perfectomobile.selenium.MobileDevice.processResponse(MobileDevice.java:504)
+	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:58)
+	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:50)
+	at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:99)
+	... 22 more
+</failure>
+    <system-out>10:14:01.354 [TestNG] INFO  c.p.selenium.MobileDriver - Creating mobile driver
+10:14:01.370 [TestNG] INFO  c.p.selenium.MobileDriver - Starting execution
+10:14:01.401 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=START_EXECUTION,_itemId=&lt;null&gt;,_parameters=[ParameterValue[_name=responseFormat,_value=xml]],_stringParameters=&lt;null&gt;,_encoding=&lt;null&gt;]
+10:14:01.401 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions?operation=start&amp;responseFormat=xml&amp;user=philipps%40perfectomobile.com
+10:14:02.837 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;executionId&gt;philipps@perfectomobile.com_controller_15-02-19_09_14_14_5069&lt;/executionId&gt;&lt;reportKey&gt;PRIVATE:controller/controller_15-02-19_09_14_14_5069.xml&lt;/reportKey&gt;&lt;/response&gt;
+10:14:02.885 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {executionId=philipps@perfectomobile.com_controller_15-02-19_09_14_14_5069, reportKey=PRIVATE:controller/controller_15-02-19_09_14_14_5069.xml}
+10:14:02.901 [TestNG] INFO  c.p.selenium.MobileDriver - Started execution: philipps@perfectomobile.com_controller_15-02-19_09_14_14_5069
+10:14:02.901 [TestNG] INFO  c.p.selenium.MobileDriver - Created mobile driver
+10:14:02.916 [TestNG] INFO  c.p.selenium.MobileEntity - Execution command handset open with parameters {allocation=nowait, handsetId=1E674EB8}
+10:14:02.916 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=EXECUTE_COMMAND,_itemId=philipps@perfectomobile.com_controller_15-02-19_09_14_14_5069,_parameters=[ParameterValue[_name=responseFormat,_value=xml], ParameterValue[_name=command,_value=handset], ParameterValue[_name=subcommand,_value=open], ParameterValue[_name=param.allocation,_value=nowait], ParameterValue[_name=param.handsetId,_value=1E674EB8]],_stringParameters=&lt;null&gt;,_encoding=UTF-8]
+10:14:02.916 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-19_09_14_14_5069?operation=command&amp;responseFormat=xml&amp;command=handset&amp;subcommand=open&amp;param.allocation=nowait&amp;param.handsetId=1E674EB8&amp;user=philipps%40perfectomobile.com
+10:14:03.259 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;timer.ux&gt;0&lt;/timer.ux&gt;&lt;timer.device&gt;0&lt;/timer.device&gt;&lt;timer.system&gt;4&lt;/timer.system&gt;&lt;flowEndCode&gt;FAILED&lt;/flowEndCode&gt;&lt;reason&gt;Failed&lt;/reason&gt;&lt;description&gt;Cannot open device 1E674EB8 for user philipps@perfectomobile.com, device is in use.&lt;/description&gt;&lt;executionId&gt;philipps@perfectomobile.com_controller_15-02-19_09_14_14_5069&lt;/executionId&gt;&lt;reportKey&gt;PRIVATE:controller/controller_15-02-19_09_14_14_5069.xml&lt;/reportKey&gt;&lt;timer.elapsed&gt;4&lt;/timer.elapsed&gt;&lt;completed&gt;true&lt;/completed&gt;&lt;/response&gt;
+10:14:03.259 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {timer.ux=0, timer.device=0, timer.system=4, flowEndCode=FAILED, reason=Failed, description=Cannot open device 1E674EB8 for user philipps@perfectomobile.com, device is in use., executionId=philipps@perfectomobile.com_controller_15-02-19_09_14_14_5069, reportKey=PRIVATE:controller/controller_15-02-19_09_14_14_5069.xml, timer.elapsed=4, completed=true}
+</system-out>
+  </testcase>
+  <testcase time="122.326" classname="com.perfectomobile.StcTest" name="f"/>
 </testsuite>

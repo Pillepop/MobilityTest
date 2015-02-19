@@ -1,12 +1,17 @@
 package com.perfectomobile;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -40,7 +45,7 @@ import com.perfectomobile.selenium.by.*;
 
 
 public class StcTest {
-	private  MobileDriver driver;
+	private static  MobileDriver driver;
 	private IMobileDevice device;
 	//private String repositoryPath = "PUBLIC:Philipp\\builds\\STC.apk";
 	//private String localPath = "C:\\mybuild\\MySTC_com.stc_2.4.0_46.apk";
@@ -48,16 +53,17 @@ public class StcTest {
 	private String repositoryPath = "PUBLIC:Philipp\\builds\\car2go_com.car2go_2.2.3_20203.apk";
 	private String localPath = "C:\\mybuild\\car2go_com.car2go_2.2.3_20203.apk";
 	private String appIdentifier = "car2go";
+	private static String _Device;
 	
 
 	@Test(dataProvider = "dp")
 	public void f(Integer n, String s) {
-	  
-	  System.out.println("test run "+s);
+	  _Device = s;
+	  Reporter.log("Test started on "+s);
 	  device = driver.getDevice(s);
 	  device.open();	  
 	 	  
-//	  install(s);
+	  install(s);
 	  testCar2Go(s);
 	  }
 	
@@ -72,15 +78,28 @@ public class StcTest {
   @BeforeTest
   public void beforeTest() {
 	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
-//	  uploadLatestBuild();
+	  uploadLatestBuild();
+	  driver.quit();
   }
 
+  @BeforeMethod
+  public void beforeMethod() {
+	  System.out.println("Instantiate driver");
+	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
+//	  uploadLatestBuild();
+  }  
+  @AfterMethod
+  public void AfterMethod() {
+	  System.out.println("Executing AfterMethod");	  
+  }  
+  
   @AfterTest
   public void afterTest() {
 	  
-	  System.out.println("finished");
+//	  System.out.println("finished");
+	  Reporter.log("Test Run finished");
 	  driver.quit();
-	  downloadReport(driver, "results.html");
+	  obtainReport();
   }
 
   @BeforeSuite
@@ -101,7 +120,7 @@ public class StcTest {
 	}
   }
 
-public void install(String deviceID){
+  public void install(String deviceID){
  
 	  try {
 		  try {
@@ -162,12 +181,16 @@ public void install(String deviceID){
 			MobileLocation location2 = new MobileAddressLocation("Wilhelm-Runge-Straﬂe 11, Ulm");
 			MobileLocation location3 = new MobileCoordinatesLocation("48.42143,9.94168");
 
-			device.setLocation(location3);sleep(2000);
+			device.setLocation(location2);
 			System.out.println("location set, centering");			
-			webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+/*			webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			visualDriver.manageMobile().visualOptions().imageMatchOptions().setMatchMode(MobileImageMatchMode.BOUNDED_SIZE);
 			visualDriver.findElement(ByMobile.image("PUBLIC:Philipp\\button_location.png")).click();
-			
+			*/			
+			webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			webDriver.findElement(By.xpath("//*[@contentDesc=\"Position bestimmen\"]")).click();
+
+	
 			visualDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(75);
 			visualDriver.findElement(By.linkText("Car2Go"));
@@ -199,5 +222,45 @@ public void install(String deviceID){
 						}
  }
 }
+	private static void obtainReport() {
+		InputStream reportStream = ((IMobileDriver) driver).downloadReport(MediaType.HTML);
+
+		if (reportStream != null) {
+			File reportFile = new File(Constants.REPORT_LIB+"TestNG_"+_Device+".HTML");
+			try {
+				FileUtils.write(reportStream, reportFile);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			Reporter.log( Constants.REPORT_LIB+"TestNG_"+_Device+".HTML");
+
+			String filename =Constants.REPORT_LIB+"TestNG_"+_Device+".HTML"  ;
+			//	Reporter.log("</br><b>Report:</b> <a href=" + filename +">Report</a>");
+
+			try {
+				BufferedReader br = new BufferedReader(new FileReader(filename));
+
+				StringBuilder sb = new StringBuilder();
+				String line = br.readLine();
+
+				Reporter.log("<DIV valign=\"top\" align=\"left\" style=\"font-family: Verdana; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10pt; color: black; text-indent: 0em; letter-spacing: normal; word-spacing: normal; text-transform: none;margin-top: 0pt; margin-bottom: 20pt; height: 3.146in; width: 10.562in; white-space: normal; line-height: normal\">");
+
+				while (line != null) {
+					sb.append(line);
+					sb.append(System.lineSeparator());
+					line = br.readLine();
+				}
+				Reporter.log(sb.toString());
+
+				Reporter.log("</DIV>");
+
+				br.close();
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			
+		}
+	}
   
 }

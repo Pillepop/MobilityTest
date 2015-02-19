@@ -29,27 +29,53 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing=0 cellpadding=0 class="param">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">360,2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">130,3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <a id="summary"></a>
 <table cellspacing=0 cellpadding=0 class="passed">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.perfectomobile.StcTest<td><a href="#m1"><b>f</b>  </a></td><td class="numi">1</td><td class="numi">374</td></tr>
 <tr><th colspan="4">Test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="2">com.perfectomobile.StcTest<td><a href="#m1"><b>f</b>  </a></td><td class="numi">2</td><td class="numi">324078</td></tr><tr class="passedodd"><td><a href="#m2"><b>f</b>  </a></td><td class="numi">2</td><td class="numi">324078</td></tr>
+<tr class="passedodd"><td rowspan="1">com.perfectomobile.StcTest<td><a href="#m2"><b>f</b>  </a></td><td class="numi">1</td><td class="numi">122357</td></tr>
 </table>
 <h1>Test</h1>
 <a id="m1"></a><h2>com.perfectomobile.StcTest:f</h2>
 <table cellspacing=0 cellpadding=0 class="param">
 <tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
-<tr><td style="padding-left:.5em;padding-right:2em">2</td>
-<td style="padding-left:.5em;padding-right:2em">219595A5</td>
+<tr><td style="padding-left:.5em;padding-right:2em">1</td>
+<td style="padding-left:.5em;padding-right:2em">1E674EB8</td>
 </tr>
+<tr><td style="padding-left:3em" colspan="2">
+<h3>Test Messages</h3>
+Test started on 1E674EB8<br/>
+<h3>Failure</h3>
+<p>Failed to open device 1E674EB8</p>
+com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:101)
+<br/>at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:91)
+<br/>at com.perfectomobile.StcTest.f(StcTest.java:64)
+<br/>21 lines not shown
+<p>Caused by Failed to execute command handset open : Cannot open device 1E674EB8 for user philipps@perfectomobile.com, device is in use.</p>
+com.perfectomobile.selenium.MobileEntity.processCommonResponse(MobileEntity.java:94)
+<br/>at com.perfectomobile.selenium.MobileDevice.processResponse(MobileDevice.java:504)
+<br/>at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:58)
+<br/>at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:50)
+<br/>at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:99)
+<br/>at com.perfectomobile.selenium.MobileDevice.open(MobileDevice.java:91)
+<br/>at com.perfectomobile.StcTest.f(StcTest.java:64)
+<br/>21 lines not shown
+</td></tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <a id="m2"></a><h2>com.perfectomobile.StcTest:f</h2>
 <table cellspacing=0 cellpadding=0 class="param">
 <tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
-<tr><td style="padding-left:.5em;padding-right:2em">1</td>
-<td style="padding-left:.5em;padding-right:2em">1E674EB8</td>
+<tr><td style="padding-left:.5em;padding-right:2em">2</td>
+<td style="padding-left:.5em;padding-right:2em">219595A5</td>
 </tr>
+<tr><td style="padding-left:3em" colspan="2">
+Test started on 219595A5<br/>
+</td></tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
