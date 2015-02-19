@@ -84,22 +84,23 @@ public class StcTest {
 
   @BeforeMethod
   public void beforeMethod() {
-	  System.out.println("Instantiate driver");
+//	  System.out.println("Instantiate driver");
 	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
 //	  uploadLatestBuild();
   }  
   @AfterMethod
   public void AfterMethod() {
-	  System.out.println("Executing AfterMethod");	  
+//	  System.out.println("Executing AfterMethod");	 
+	  Reporter.log("Test Run finished");
+	  driver.quit();
+	  obtainReport();
   }  
   
   @AfterTest
   public void afterTest() {
 	  
 //	  System.out.println("finished");
-	  Reporter.log("Test Run finished");
-	  driver.quit();
-	  obtainReport();
+	  
   }
 
   @BeforeSuite
@@ -172,7 +173,7 @@ public class StcTest {
       IMobileWebDriver nativeDriver = device.getNativeDriver();
       	  
       device.getNativeDriver(appIdentifier).open();		
-	  sleep(2000);	
+	
 		try{
 			visualDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(95);
@@ -187,14 +188,15 @@ public class StcTest {
 			visualDriver.manageMobile().visualOptions().imageMatchOptions().setMatchMode(MobileImageMatchMode.BOUNDED_SIZE);
 			visualDriver.findElement(ByMobile.image("PUBLIC:Philipp\\button_location.png")).click();
 			*/			
-			webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			webDriver.findElement(By.xpath("//*[@contentDesc=\"Position bestimmen\"]")).click();
-
+			//nativeDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			//nativeDriver.findElement(By.xpath("//*[@contentDesc=\"Position bestimmen\"]")).click();
+			nativeDriver.findElement(By.xpath("//*[@resourceid=\"com.car2go:id/action_locate_me\"]")).click();
 	
 			visualDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(75);
 			visualDriver.findElement(By.linkText("Car2Go"));
 			System.out.println("Car displayed");
+			
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
