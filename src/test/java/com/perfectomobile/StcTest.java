@@ -55,6 +55,9 @@ public class StcTest {
 	private String appIdentifier = "car2go";
 	private static String _Device;
 	
+	private boolean bUpload=false;
+	private boolean bInstall=false;
+	
 
 	@Test(dataProvider = "dp")
 	public void f(Integer n, String s) {
@@ -63,10 +66,11 @@ public class StcTest {
 	  device = driver.getDevice(s);
 	  device.open();	  
 	 	  
-	  install(s);
-	  testCar2Go(s);
-	  }
-	
+	 if (bInstall){  
+		 install(s);  
+	 }
+	testCar2Go(s);
+	}
 	  @DataProvider
 	  public Object[][] dp() {
 	    return new Object[][] {
@@ -78,7 +82,9 @@ public class StcTest {
   @BeforeTest
   public void beforeTest() {
 	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
+	  if (bUpload){ 
 	  uploadLatestBuild();
+	  }
 	  driver.quit();
   }
 
