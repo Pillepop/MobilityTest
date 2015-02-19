@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" verbose="0" name="Failed suite [Suite]" parallel="tests">
-  <test name="Test(failed)" parallel="tests" preserve-order="false">
+  <parameter name="deviceID" value="219595A5"/>
+  <test name="Test_Android_S5(failed)" parallel="tests" preserve-order="false">
+    <parameter name="deviceID" value="1E674EB8"/>
     <classes>
       <class name="com.perfectomobile.StcTest">
         <methods>
           <include name="afterSuite"/>
+          <include name="AfterMethod"/>
           <include name="f" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
           <include name="beforeSuite"/>

@@ -1,6 +1,7 @@
 package com.perfectomobile;
 
 import com.perfectomobile.Constants;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -14,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -59,26 +61,26 @@ public class StcTest {
 	private boolean bUpload=false;
 	private boolean bInstall=false;
 	
-
-	@Test(dataProvider = "dp")
-	public void f(Integer n, String s) {
-	  _Device = s;
-	  Reporter.log("Test started on "+s);
-	  device = driver.getDevice(s);
+	@Parameters({ "deviceID" })
+	@Test
+	public void f(String deviceID) {
+	  _Device = deviceID;
+	  Reporter.log("Test started on "+_Device);
+	  device = driver.getDevice(_Device);
 	  device.open();	  
 	 	  
 	 if (bInstall){  
-		 install(s);  
+		 install(_Device);  
 	 }
-	testCar2Go(s);
+	testCar2Go(_Device);
 	}
-	  @DataProvider
+/*	  @DataProvider
 	  public Object[][] dp() {
 	    return new Object[][] {
 	      new Object[] { 1, "1E674EB8" },
 	      new Object[] { 2, "219595A5" },
 	    };
-	  }
+	  }*/
 
   @BeforeTest
   public void beforeTest() {

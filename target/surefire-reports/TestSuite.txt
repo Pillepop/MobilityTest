@@ -1,4 +1,26 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 340.152 sec
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 99.162 sec <<< FAILURE!
+f(com.perfectomobile.StcTest)  Time elapsed: 95.254 sec  <<< FAILURE!
+java.lang.RuntimeException: Failed to close device 1E674EB8
+	at com.perfectomobile.selenium.MobileDevice.close(MobileDevice.java:117)
+	at com.perfectomobile.selenium.MobileDevice.close(MobileDevice.java:107)
+	at com.perfectomobile.StcTest.testCar2Go(StcTest.java:215)
+	at com.perfectomobile.StcTest.f(StcTest.java:75)
+Caused by: com.perfectomobile.httpclient.HttpClientException: Failed to execute command handset close : null
+	at com.perfectomobile.selenium.MobileEntity.processCommonResponse(MobileEntity.java:94)
+	at com.perfectomobile.selenium.MobileDevice.processResponse(MobileDevice.java:504)
+	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:58)
+	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:50)
+	at com.perfectomobile.selenium.MobileDevice.close(MobileDevice.java:115)
+	... 23 more
+AfterMethod(com.perfectomobile.StcTest)  Time elapsed: 96.113 sec  <<< FAILURE!
+java.lang.RuntimeException: Failed to end execution
+	at com.perfectomobile.selenium.MobileDriver.quit(MobileDriver.java:227)
+	at com.perfectomobile.StcTest.AfterMethod(StcTest.java:104)
+Caused by: com.perfectomobile.httpclient.HttpClientException: Failed to end execution - Could not stop play for execution id: philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169 - no execution found
+	at com.perfectomobile.httpclient.HttpClient.getStatus(HttpClient.java:358)
+	at com.perfectomobile.httpclient.execution.ExecutionsHttpClient.endExecution(ExecutionsHttpClient.java:290)
+	at com.perfectomobile.selenium.MobileDriver.quit(MobileDriver.java:221)
+	... 23 more

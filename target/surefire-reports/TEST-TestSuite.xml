@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="305.326" errors="0" skipped="0" tests="2" name="TestSuite">
+<testsuite failures="2" time="369.856" errors="0" skipped="1" tests="4" name="TestSuite">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_51\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\philipps\workspace_luna\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6621918768048384005.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\philipps\workspace_luna\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1613601362451974793.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_51\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/bin/server;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/bin;C:/Program Files/Java/jdk1.7.0_51/bin/../jre/lib/amd64;c:\windows\system32;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\HP\Unified Functional Testing\bin;C:\Program Files (x86)\Calibre2\;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\Git\cmd;C:\Users\philipps\java\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -63,6 +63,57 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="150.64" classname="com.perfectomobile.StcTest" name="f"/>
-  <testcase time="154.686" classname="com.perfectomobile.StcTest" name="f"/>
+  <testcase time="82.376" classname="com.perfectomobile.StcTest" name="f"/>
+  <testcase time="95.254" classname="com.perfectomobile.StcTest" name="f">
+    <failure message="Failed to close device 1E674EB8" type="java.lang.RuntimeException">java.lang.RuntimeException: Failed to close device 1E674EB8
+	at com.perfectomobile.selenium.MobileDevice.close(MobileDevice.java:117)
+	at com.perfectomobile.selenium.MobileDevice.close(MobileDevice.java:107)
+	at com.perfectomobile.StcTest.testCar2Go(StcTest.java:215)
+	at com.perfectomobile.StcTest.f(StcTest.java:75)
+Caused by: com.perfectomobile.httpclient.HttpClientException: Failed to execute command handset close : null
+	at com.perfectomobile.selenium.MobileEntity.processCommonResponse(MobileEntity.java:94)
+	at com.perfectomobile.selenium.MobileDevice.processResponse(MobileDevice.java:504)
+	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:58)
+	at com.perfectomobile.selenium.MobileEntity.executeCommand(MobileEntity.java:50)
+	at com.perfectomobile.selenium.MobileDevice.close(MobileDevice.java:115)
+	... 23 more
+</failure>
+    <system-out>11:28:00.944 [TestNG] INFO  c.p.selenium.MobileDriver - Ending execution
+11:28:00.959 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=END_EXECUTION,_itemId=philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169,_parameters=[ParameterValue[_name=responseFormat,_value=xml]],_stringParameters=&lt;null&gt;,_encoding=&lt;null&gt;]
+11:28:00.959 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169?operation=end&amp;responseFormat=xml&amp;user=philipps%40perfectomobile.com
+11:28:13.822 [TestNG] ERROR c.p.httpclient.HttpClient - Request: https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169?operation=command&amp;responseFormat=xml&amp;command=handset&amp;subcommand=close&amp;param.handsetId=1E674EB8&amp;user=philipps%40perfectomobile.com returned with error code 500 and content type text/xml;charset=UTF-8
+11:28:13.822 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;errorMessage&gt;Failed to execute command - No Tcl interpreter found for execution execution id philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169, cannot remove interpeter.&lt;/errorMessage&gt;&lt;/response&gt;
+11:28:13.822 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {errorMessage=Failed to execute command - No Tcl interpreter found for execution execution id philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169, cannot remove interpeter.}
+</system-out>
+  </testcase>
+  <testcase time="96.113" classname="com.perfectomobile.StcTest" name="AfterMethod">
+    <failure message="Failed to end execution" type="java.lang.RuntimeException">java.lang.RuntimeException: Failed to end execution
+	at com.perfectomobile.selenium.MobileDriver.quit(MobileDriver.java:227)
+	at com.perfectomobile.StcTest.AfterMethod(StcTest.java:104)
+Caused by: com.perfectomobile.httpclient.HttpClientException: Failed to end execution - Could not stop play for execution id: philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169 - no execution found
+	at com.perfectomobile.httpclient.HttpClient.getStatus(HttpClient.java:358)
+	at com.perfectomobile.httpclient.execution.ExecutionsHttpClient.endExecution(ExecutionsHttpClient.java:290)
+	at com.perfectomobile.selenium.MobileDriver.quit(MobileDriver.java:221)
+	... 23 more
+</failure>
+    <system-out>11:28:13.822 [TestNG] INFO  c.p.selenium.MobileDriver - Ending execution
+11:28:13.822 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=END_EXECUTION,_itemId=philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169,_parameters=[ParameterValue[_name=responseFormat,_value=xml]],_stringParameters=&lt;null&gt;,_encoding=&lt;null&gt;]
+11:28:13.822 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169?operation=end&amp;responseFormat=xml&amp;user=philipps%40perfectomobile.com
+11:28:13.885 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;status&gt;Success&lt;/status&gt;&lt;/response&gt;
+11:28:13.901 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {status=Success}
+11:28:13.901 [TestNG] INFO  c.p.selenium.MobileDriver - Ended execution: philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169 with status Success
+11:28:13.901 [TestNG] INFO  c.p.httpclient.HttpClient - Processing request Request[_requestType=DOWNLOAD_REPORT,_itemId=PRIVATE:controller/controller_15-02-19_10_26_50_5169.xml,_parameters=[ParameterValue[_name=responseFormat,_value=xml], ParameterValue[_name=format,_value=html]],_stringParameters=&lt;null&gt;,_encoding=&lt;null&gt;]
+11:28:13.901 [TestNG] INFO  c.p.httpclient.HttpClient - URL = https://demo.perfectomobile.com/services/reports/PRIVATE:controller/controller_15-02-19_10_26_50_5169.xml?operation=download&amp;responseFormat=xml&amp;format=html&amp;user=philipps%40perfectomobile.com
+11:28:14.135 [TestNG] ERROR c.p.httpclient.HttpClient - Request: https://demo.perfectomobile.com/services/reports/PRIVATE:controller/controller_15-02-19_10_26_50_5169.xml?operation=download&amp;responseFormat=xml&amp;format=html&amp;user=philipps%40perfectomobile.com returned with error code 400 and content type text/xml;charset=UTF-8
+11:28:14.649 [TestNG] ERROR c.p.httpclient.HttpClient - Request: https://demo.perfectomobile.com/services/executions/philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169?operation=end&amp;responseFormat=xml&amp;user=philipps%40perfectomobile.com returned with error code 500 and content type text/xml;charset=UTF-8
+11:28:14.649 [TestNG] INFO  c.p.httpclient.HttpClient - Response: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;&lt;errorMessage&gt;Failed to end execution - Could not stop play for execution id: philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169 - no execution found&lt;/errorMessage&gt;&lt;/response&gt;
+11:28:14.649 [TestNG] INFO  c.p.httpclient.HttpClient - Response values: {errorMessage=Failed to end execution - Could not stop play for execution id: philipps@perfectomobile.com_controller_15-02-19_10_26_50_5169 - no execution found}
+</system-out>
+  </testcase>
+  <testcase time="96.113" classname="com.perfectomobile.StcTest" name="afterTest">
+    <skipped/>
+  </testcase>
 </testsuite>

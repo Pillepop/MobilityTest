@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" name="Suite" parallel="tests">
-  <test name="Test">
-    <classes>
+  <test name="Test_Android_S5">
+  <parameter name="deviceID" value="1E674EB8">
+    <classes>    
       <class name="com.perfectomobile.StcTest"/>
     </classes>
+   </parameter> 
   </test> <!-- Test -->
+  <test name="Test_Android_S4">
+  <parameter name="deviceID" value="219595A5">
+    <classes>    
+      <class name="com.perfectomobile.StcTest"/>
+    </classes>
+   </parameter> 
+  </test>
 </suite> <!-- Suite -->
