@@ -172,7 +172,7 @@ public void install(String deviceID){
 			visualDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(75);
 			visualDriver.findElement(By.linkText("CarEGo"));
-			System.out.println("found");
+			System.out.println("Car displayed");
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
