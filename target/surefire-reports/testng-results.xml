@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="155773" started-at="2015-02-19T01:23:44Z" finished-at="2015-02-19T01:26:20Z">
+  <suite name="Suite" duration-ms="360220" started-at="2015-02-19T08:49:24Z" finished-at="2015-02-19T08:55:25Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="155773" started-at="2015-02-19T01:23:44Z" finished-at="2015-02-19T01:26:20Z">
+    <test name="Test" duration-ms="360220" started-at="2015-02-19T08:49:24Z" finished-at="2015-02-19T08:55:25Z">
       <class name="com.perfectomobile.StcTest">
-        <test-method status="PASS" signature="beforeSuite()" name="beforeSuite" is-config="true" duration-ms="16" started-at="2015-02-19T01:23:44Z" finished-at="2015-02-19T01:23:44Z">
+        <test-method status="PASS" signature="beforeTest()" name="beforeTest" is-config="true" duration-ms="30460" started-at="2015-02-19T08:49:24Z" finished-at="2015-02-19T08:49:55Z">
         </test-method>
-        <test-method status="PASS" signature="beforeTest()" name="beforeTest" is-config="true" duration-ms="1537" started-at="2015-02-19T01:23:44Z" finished-at="2015-02-19T01:23:46Z">
+        <test-method status="PASS" signature="beforeSuite()" name="beforeSuite" is-config="true" duration-ms="0" started-at="2015-02-19T08:49:24Z" finished-at="2015-02-19T08:49:24Z">
         </test-method>
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)" name="f" duration-ms="89752" started-at="2015-02-19T01:23:46Z" finished-at="2015-02-19T01:25:16Z">
+        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)" name="f" duration-ms="173437" started-at="2015-02-19T08:49:55Z" finished-at="2015-02-19T08:52:48Z">
           <params>
             <param index="0">
               <value>
@@ -25,7 +25,7 @@
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)" name="f" duration-ms="63542" started-at="2015-02-19T01:25:16Z" finished-at="2015-02-19T01:26:19Z">
+        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)" name="f" duration-ms="150640" started-at="2015-02-19T08:52:48Z" finished-at="2015-02-19T08:55:19Z">
           <params>
             <param index="0">
               <value>
@@ -39,9 +39,9 @@
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="afterTest()" name="afterTest" is-config="true" duration-ms="927" started-at="2015-02-19T01:26:19Z" finished-at="2015-02-19T01:26:20Z">
+        <test-method status="PASS" signature="afterTest()" name="afterTest" is-config="true" duration-ms="5650" started-at="2015-02-19T08:55:19Z" finished-at="2015-02-19T08:55:25Z">
         </test-method>
-        <test-method status="PASS" signature="afterSuite()" name="afterSuite" is-config="true" duration-ms="0" started-at="2015-02-19T01:26:20Z" finished-at="2015-02-19T01:26:20Z">
+        <test-method status="PASS" signature="afterSuite()" name="afterSuite" is-config="true" duration-ms="0" started-at="2015-02-19T08:55:25Z" finished-at="2015-02-19T08:55:25Z">
         </test-method>
       </class>
     </test>

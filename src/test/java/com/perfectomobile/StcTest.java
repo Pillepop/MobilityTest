@@ -57,7 +57,7 @@ public class StcTest {
 	  device = driver.getDevice(s);
 	  device.open();	  
 	 	  
-	  install(s);
+//	  install(s);
 	  testCar2Go(s);
 	  }
 	
@@ -72,16 +72,15 @@ public class StcTest {
   @BeforeTest
   public void beforeTest() {
 	  driver  = new MobileDriver("demo.perfectomobile.com", "philipps@perfectomobile.com", "Perfect0123");
-	  uploadLatestBuild();
+//	  uploadLatestBuild();
   }
 
   @AfterTest
   public void afterTest() {
 	  
 	  System.out.println("finished");
-	  downloadReport(driver, "results.html");
 	  driver.quit();
-	  
+	  downloadReport(driver, "results.html");
   }
 
   @BeforeSuite
@@ -171,7 +170,7 @@ public void install(String deviceID){
 			
 			visualDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			visualDriver.manageMobile().visualOptions().validationOptions().setThreshold(75);
-			visualDriver.findElement(By.linkText("CarEGo"));
+			visualDriver.findElement(By.linkText("Car2Go"));
 			System.out.println("Car displayed");
 			
 		} catch (Exception e) {
